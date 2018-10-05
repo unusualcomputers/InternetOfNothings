@@ -61,11 +61,6 @@ void DNSServer::processNextRequest()
         (_domainName == "*" || getDomainNameWithoutWwwPrefix() == _domainName)
        )
     {
-           
-      String domainName = getDomainNameWithoutWwwPrefix();
-      //if(domainName=="captive.apple.com" || domainName=="apple.com")
-      //  isCaptive=true;
-       
       replyWithIP();
     }
     else if (_dnsHeader->QR == DNS_QR_QUERY)

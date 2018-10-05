@@ -48,7 +48,7 @@ void setup() {
   // provided IP to all DNS request
   dnsServer.start(DNS_PORT, "*", apIP);
 
-  // replay to all requests with same HTML
+  // handle captive portal detection for various browsers
   webServer.on("/generate_204", handle204);
   webServer.on("/success.txt",handleSuccess);
   webServer.on("/library/test/success.html",handleAppleSuccess);
